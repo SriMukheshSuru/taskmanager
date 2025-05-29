@@ -10,6 +10,47 @@
 <div class="content">
     <h1>Task Manager</h1>
 
+    {% if tasks|length < 1 %} <h4>There are no Tasks. Add some below!</h4>
+        {% else %}
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Added</th>
+                    <th>Actions</th>
+                </tr>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.content }}</td>
+                    <!-- <td>{{ task.date_created.date() }}</td> -->
+                    <td>{{ task.date_created.strftime('%#d %B %Y') }}<br>{{ task.date_created.strftime('%#I:%M %p') }}
+                    </td>
+                    <td>
+                        <a class="btn delete" href="/delete/{{task.id}}">Delete</a>
+                        <a class="btn update" href="/update/{{task.id}}">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        {% endif %}
+
+        <div class="form">
+            <form action="/" method="POST">
+                <input type="text" name="content" id="content" placeholder="Enter a new task">
+                <input class="btn add" type="submit" value="Add Task">
+            </form>
+        </div>
+</div>
+
+
+
+
+
+
+<!-- <div class="content">
+    <h1>Task Manager</h1>
+
     {% if tasks|length <1 %}
 
     <h4>There are no Tasks.Add some below!!</h4>
@@ -44,5 +85,5 @@
         </form>
     </div>
 
-</div>
+</div> -->
 {% endblock %}

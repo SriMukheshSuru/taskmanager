@@ -1,4 +1,4 @@
-body,
+/* body,
 html {
     margin: 0;
     font-family: sans-serif;
@@ -39,4 +39,111 @@ td {
 
 h1,h4{
     text-align: center;
+} */
+
+
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1,
+h4 {
+    text-align: center;
+    color: #333;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 2px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.btn.delete {
+    background-color: #e74c3c;
+}
+
+.btn.delete:hover {
+    background-color: #c0392b;
+}
+
+.btn.update {
+    background-color: #3498db;
+}
+
+.btn.update:hover {
+    background-color: #2980b9;
+}
+
+.btn.add {
+    background-color: #2ecc71;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.add:hover {
+    background-color: #27ae60;
+}
+
+.form {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#content {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
 }
